@@ -1,0 +1,207 @@
+  
+  
+       
+  
+  /* Product List */
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+      }
+      .infor{
+        width: 350px;
+        height: 350px;
+        padding-top: 60px;
+    }
+      body {
+        background: #FFFFFF;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: black;
+        margin: 0;
+        padding: 0;
+      }
+      .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
+      }
+      .swiper {
+        max-width: 90%;
+        height: auto;
+        /* border: 1px solid black; */
+        margin: auto;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 400px;
+        height: 400px;
+
+      }
+      .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        width: 650px;
+      }
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: black;
+       /*  border: 1px solid black; */
+        float: right;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 50px;
+        height: 12px;
+        left: 904px;
+        top: 661px;
+        background: #000000;
+        border-radius: 20px;
+        transition :width 0.5s, height 1s;
+      }
+      .code{
+        font-size: 12px;
+        color: #979797;
+    }
+    .type{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .tag-name{
+        text-transform: uppercase;;
+    }
+    .tag-name, .name{
+        font-weight: 800;
+        font-size: 2.1rem;
+        margin:  5px;
+    }
+    .price{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .card-btn{  
+        width: 130px;
+        height: 40px;   
+        color: #FFFFFF;
+        background: #000000;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+
+    /*   End of Product List */
+@media max {
+}
+.mainContent{
+  display: flex;
+  flex-direction: row;
+}
+.main{
+  /* border: 1px solid black; */
+  height: 100vh;
+  margin: auto;
+  max-width: 80%;
+}
+.social-media{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-height: 100%;
+  border-right: 2px solid #958686;;
+  align-items: center;
+  width: 7%;
+    
+}
+.line{
+  margin-top: 20px;
+}
+.line a{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.line a svg{
+  height: 20px;
+}
+
+.media{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25%;
+  padding: 20px;
+}
+
+nav{
+ /*  border: 1px solid black; */
+  margin: auto;
+  padding-top: 15px;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.hero{
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+}
+.logo{
+  display: flex;
+  flex-direction: row ;
+  width: 200px;
+  align-items: center;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+}
+.logo .shop-name{
+  font-weight: 700;
+
+}
+.nav_bar{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none; 
+} 
+.nav_bar li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+#CartCount {
+  font-size: 14 px;
+  background: #F25F0C;
+  color: #fff;
+  padding: 0 8px;
+  vertical-align: top;
+  margin-left: -14px;
+  border-radius: 10px;
+  font-weight: 510;
+}
+
+
