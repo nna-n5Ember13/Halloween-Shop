@@ -33,12 +33,6 @@ function fetchDataFromAPI(){
 fetchDataFromAPI()
  
 /* onclick Buy Now button */
-const btn = document.querySelectorAll(".card-btn")
-function insertHTML(){
-  const newHTML = document.getElementById("shoppingCart");
-  newHTML.innerHTML += '<span class="badge badge-warning" id="CartCount"> 1 </span>'
-}
 
-btn.addEventListener("click", insertHTML())
 
 
