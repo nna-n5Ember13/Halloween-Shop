@@ -22,14 +22,14 @@
 
   <body>
    <main class="mainContent">
-    <section class="social-media">
+    <section class="social-media"> 
       <div class="line">
-      <a href=""><svg width="56" height="3" viewBox="0 0 56 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line y1="1.5" x2="56" y2="1.5" stroke="black" stroke-width="3"/>
-        </svg>
-        <svg width="28" height="3" viewBox="0 0 28 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="-5.76128e-08" y1="1.5" x2="28" y2="1.49999" stroke="black" stroke-width="3"/>
-          </svg> </a>
+        <button> 
+          <svg width="56" height="20" viewBox="0 0 56 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="1.5" x2="56" y2="1.5" stroke="black" stroke-width="3"/>
+<line x1="-5.76128e-08" y1="18.5" x2="28" y2="18.5" stroke="black" stroke-width="3"/>
+</svg>
+</button>
         </div>             
       <div class="media">
       <svg class="instagram" width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,46 +49,73 @@
 
     <section class="main">
        <!-- Navigation Bar -->
-            <nav>
-              <div class="hero">
+            <header>
+              <div class="navigation">
                       <div class="logo">
                               <img src="Image/logo.png" alt="">
                               <div class="shop-name"> <p>Dino Ghost</p> </div>
                       </div>
-
-                      <ul class="nav_bar">
+                      
+                      <button class="mobile-close-btn" data-visible="false" aria-controls="primary-navigation">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M21.8614 0.378025L12.0006 10.2388L2.13982 0.378025C1.87854 0.143453 1.58511 0.0261673 1.25955 0.0261673C0.933987 0.0261673 0.646824 0.150132 0.39806 0.39806C0.149297 0.645989 0.0253319 0.933152 0.0261667 1.25955C0.0270014 1.58595 0.144288 1.87937 0.378025 2.13982L10.2388 12.0006L0.378025 21.8614C0.0391059 22.2003 -0.0719192 22.6048 0.0449496 23.0748C0.161818 23.5448 0.448981 23.8382 0.906439 23.955C1.3639 24.0719 1.77461 23.9609 2.13857 23.622L11.9994 13.7612L21.8602 23.622C22.1215 23.8565 22.4149 23.9738 22.7404 23.9738C23.066 23.9738 23.3532 23.8499 23.6019 23.6019C23.8507 23.354 23.9747 23.0668 23.9738 22.7404C23.973 22.414 23.8557 22.1206 23.622 21.8602L13.7612 11.9994L23.622 2.13857C23.9609 1.79965 24.0719 1.3952 23.955 0.925222C23.8382 0.455243 23.5448 0.161818 23.0748 0.0449496C22.6048 -0.0719192 22.2003 0.0391059 21.8614 0.378025Z" fill="#F25F0C"/>
+                          </svg>
+                          
+                      </button>
+                      <nav>
+                      <ul class="nav_bar" id="primary-navigation">
                               <li><a href="">Ghost</a></li>
                               <li><a href="">Pumpkin</a></li>
                               <li><a href="">Bat</a></li>
                               <li><a href="">Customize</a></li>
-                      </ul>  
+                      </ul>
+                    </nav>    
+                      
+
+
               </div>
             <div id="shoppingCart">
-            <a href=""> <svg width="45 " height="45" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button id="cart-box" aria-controls="cart-icon" class="shopping-bag"> <svg width="45 " height="45" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="30" cy="30" r="30" fill="black"/>
                     <path d="M42.18 22.0649L37.935 17.8199C37.0919 16.9758 35.9481 16.501 34.755 16.4999H25.245C24.052 16.501 22.9081 16.9758 22.065 17.8199L17.82 22.0649C16.9759 22.908 16.5011 24.0519 16.5 25.2449V38.9999C16.5 40.1934 16.9742 41.338 17.8181 42.1819C18.662 43.0258 19.8066 43.4999 21 43.4999H39C40.1935 43.4999 41.3381 43.0258 42.182 42.1819C43.0259 41.338 43.5 40.1934 43.5 38.9999V25.2449C43.499 24.0519 43.0242 22.908 42.18 22.0649V22.0649ZM24.18 19.9349C24.4675 19.6608 24.8479 19.5055 25.245 19.4999H34.755C35.1522 19.5055 35.5326 19.6608 35.82 19.9349L38.385 22.4999H21.615L24.18 19.9349ZM39 40.4999H21C20.6022 40.4999 20.2207 40.3419 19.9394 40.0606C19.6581 39.7793 19.5 39.3978 19.5 38.9999V25.4999H40.5V38.9999C40.5 39.3978 40.342 39.7793 40.0607 40.0606C39.7794 40.3419 39.3979 40.4999 39 40.4999Z" fill="white"/>
                     <path d="M34.5002 28.4999C34.1023 28.4999 33.7208 28.658 33.4395 28.9393C33.1582 29.2206 33.0002 29.6021 33.0002 29.9999C33.0002 30.7956 32.6841 31.5586 32.1215 32.1213C31.5589 32.6839 30.7958 32.9999 30.0002 32.9999C29.2045 32.9999 28.4414 32.6839 27.8788 32.1213C27.3162 31.5586 27.0002 30.7956 27.0002 29.9999C27.0002 29.6021 26.8421 29.2206 26.5608 28.9393C26.2795 28.658 25.898 28.4999 25.5002 28.4999C25.1023 28.4999 24.7208 28.658 24.4395 28.9393C24.1582 29.2206 24.0002 29.6021 24.0002 29.9999C24.0002 31.5912 24.6323 33.1174 25.7575 34.2426C26.8827 35.3678 28.4089 35.9999 30.0002 35.9999C31.5915 35.9999 33.1176 35.3678 34.2428 34.2426C35.368 33.1174 36.0002 31.5912 36.0002 29.9999C36.0002 29.6021 35.8421 29.2206 35.5608 28.9393C35.2795 28.658 34.898 28.4999 34.5002 28.4999Z" fill="white"/>
-            </svg> </a>
+            </svg> 
+          
+          </button>
+            
             <!-- <span class="badge badge-warning" id="CartCount"> 1 </span> -->
-            <div class="mini-cart">
-              <div class="mini-cart-content">
-                  <div class="cart-head">
-                      Shopping Cart
+            <div id="cart-icon" data-visible="false" class="mini-cart">
+                  <div class="mini-cart-content">
+                        <div class="cart-head">
+                            Shopping Cart
+                        </div>
+                        
+                        <div class="cart-body">
+                              <ul clas="products mini">
+                                  <li class="item">
+              
+                                  </li>   
+                              </ul>
+                              <button>Check Out</button>
+                        </div>
                   </div>
-                  <div class="cart-body">
-                      <ul clas="products mini">
-                           <li class="item">
-      
-                           </li>   
-                      </ul>
-                      <button>Check Out</button>
-                  </div>
-              </div>
-          </div>
+            </div>
+            <div class="mobile-open-btn">
+              <i>
+                <svg width="56" height="20" viewBox="0 0 56 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <line y1="1.5" x2="56" y2="1.5" stroke="black" stroke-width="3"/>
+                  <line x1="-5.76128e-08" y1="18.5" x2="28" y2="18.5" stroke="black" stroke-width="3"/>
+                  </svg>
+                  
+              </i>
+            </div>
+
+
+            </div>
               
       <!-- End of Navigation -->
                 
-            </nav>
+        </header>
           <!-- Product -->
             <div class="container">
             <div class="swiper mySwiper">
