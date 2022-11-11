@@ -70,17 +70,19 @@ function fetchDataFromAPI(){
     .then(function(data){
         /* console.log(data.data) */
         const htmls = data.data.map(function(values){
-           return `<div class="swiper-slide">
-                            <img src=${values.image} alt="">
+           return `<div class="swiper-slide boxsp">
+                            <div> <img src=${values.image} alt=""> </div>
+                          
                             <div class="infor">
                                     <p class="tag-name">#${values.type}</p>
                                 <p class="name">${values.name}</p>
                                 <p class="code">Item No ${values.code}</p>
                                 <p class="type">Item type: ${values.type}</p>
                                 <p class="price">$${values.price}</p>
-                                <button class="card-btn">Buy now</button>
+                                <button class="card-btn" onclick="addToCart(this)">Buy now</button>;
                             </div>
-                    </div>`;
+                    </div>`
+                    
         }).join('');
         document.querySelector("#cards").insertAdjacentHTML("afterbegin", htmls)
     })
@@ -94,24 +96,25 @@ fetchDataFromAPI()
 var noti = document.querySelector('.shopping-bag');
 	var select = document.querySelector('.products-mini');
 	var button = document.querySelector('.card-btn');
-	for(var but of button){
-		but.addEventListener('click', (e)=>{
-			var add = Number(noti.getAttribute('data-count') || 0);
-			noti.setAttribute('data-count', add +1);
-			noti.classList.add('zero')
-
+	button.onclick = () =>{}
+	function addToCart(x){
+        var add = Number(noti.getAttribute('data-count') || 0);
+        noti.setAttribute('data-count', add +1);
+        noti.classList.add('zero')
+    }	
+			
 			// copy and paste //
-			var parent = e.target.parentNode;
+			/* var parent = e.target.parentNode;
 			var clone = parent.cloneNode(true);
 			select.appendChild(clone);
-			clone.lastElementChild.innerText = "Buy-now";
-			
+			clone.lastElementChild.innerText = "Buy-now"; */
+			/* 
 			if (clone) {
 				noti.onclick = ()=>{
 					select.classList.toggle('display');
 				}	
-			}
-		})
-	}
+			} */
+		
+	
 
 
