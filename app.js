@@ -50,70 +50,61 @@ crossBtn.addEventListener('click', () =>{
     }
 })
 
-
-
-
-
-
-
-
-
 /* fetch API */
+let dataGlobal;
 
-function fetchDataFromAPI(){
+    const getData = async () => {
+    const response = await fetch("https://berequirement.herokuapp.com/products");
+    const data = await response.json();
+    dataGlobal = data;
+    return data;
+    };
 
-
-    fetch('https://berequirement.herokuapp.com/products')
-    .then((response) => {
-        return response.json()
-    })
-    .then(function(data){
-        /* console.log(data.data) */
-        const htmls = data.data.map(function(values){
-           return `<div class="swiper-slide boxsp">
-                            <div> <img src=${values.image} alt=""> </div>
-                          
-                            <div class="infor">
-                                    <p class="tag-name">#${values.type}</p>
-                                <p class="name">${values.name}</p>
-                                <p class="code">Item No ${values.code}</p>
-                                <p class="type">Item type: ${values.type}</p>
-                                <p class="price">$${values.price}</p>
-                                <button class="card-btn" onclick="addToCart(this)">Buy now</button>;
-                            </div>
-                    </div>`
-                    
-        }).join('');
-        document.querySelector("#cards").insertAdjacentHTML("afterbegin", htmls)
-    })
-    .catch(function(err){
-        console.log("Error!!!")
-            })
-}   
-fetchDataFromAPI()
+    (async () => {
+    await getData();
+    const htmls = dataGlobal.data.map(function(values){
+        return `<div class="swiper-slide">
+                         <div> <img src=${values.image} alt=""> </div>
+                       
+                         <div class="infor">
+                                 <p class="tag-name">#${values.type}</p>
+                             <p class="name">${values.name}</p>
+                             <p class="code">Item No ${values.code}</p>
+                             <p class="type">Item type: ${values.type}</p>
+                             <p class="price">$${values.price}</p>
+                             
+                         </div>
+                 </div>`
+                 
+     }).join('');
+     document.querySelector("#cards").insertAdjacentHTML("afterbegin", htmls)
+ })
+ 
+    ();
 
 
-var noti = document.querySelector('.shopping-bag');
-	var select = document.querySelector('.products-mini');
-	var button = document.querySelector('.card-btn');
-	button.onclick = () =>{}
-	function addToCart(x){
-        var add = Number(noti.getAttribute('data-count') || 0);
-        noti.setAttribute('data-count', add +1);
-        noti.classList.add('zero')
-    }	
+    const noti = document.querySelector('.shopping-bag');
+	const select = document.querySelector('.products-mini');
+	const button = document.querySelector('.card-btn');
+    
+		button.addEventListener('click', (e)=>{
+			var add = Number(noti.getAttribute('data-count') || 0);
+			noti.setAttribute('data-count', add +1);
+			noti.classList.add('zero')
+
+			var btnItem = e.target;
+            var product = btnItem.parentElement;
+           /*  var productImg = product.querySelector('.name')
+            console.log(productImg) */
+            /* console.log(product) */
+            button.innerText = "Buy More"
+		})
+
+    
+
+
 			
-			// copy and paste //
-			/* var parent = e.target.parentNode;
-			var clone = parent.cloneNode(true);
-			select.appendChild(clone);
-			clone.lastElementChild.innerText = "Buy-now"; */
-			/* 
-			if (clone) {
-				noti.onclick = ()=>{
-					select.classList.toggle('display');
-				}	
-			} */
+		
 		
 	
 
