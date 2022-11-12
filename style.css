@@ -74,7 +74,7 @@ body {
   top: 661px;
   background: #000000;
   border-radius: 20px;
-  transition :width 0.5s, height 1s;
+  transition :width 1s, height 2s;
 }
 .code{
   font-size: 12px;
@@ -175,6 +175,7 @@ width: 70%;
   display: flex;
   justify-content: space-evenly;
 }
+
 .logo{
 display: flex;
 flex-direction: row ;
@@ -200,6 +201,9 @@ list-style: none;
 text-decoration: none;
 color: black;
 font-weight: 500;
+}
+.primary-navigation .ghost-nav {
+  border-bottom: 2px solid #000000;
 }
 .mobile-close-btn{
   display: none;
@@ -237,7 +241,7 @@ font-weight: 500;
   width: 20px;
   height: 37px;
   right: 19px;
-  top: -25px;
+  top: -25px; 
 } */
 #cart-items{
 /* padding-right: 5px; */
@@ -324,6 +328,7 @@ flex-direction: column;
     flex-direction: row;
     width: 40%;
     justify-content: space-between;
+    gap: 10px;
   }
   .shopping-bag svg{
     transform: scale(0.75)
@@ -382,6 +387,58 @@ flex-direction: column;
     width: 20px;
     height: 20px;
   }
+  .main {
+    max-width: 100%;
+  }
+  .container{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-slide{
+    align-items: center;
+    text-align: center;
+    flex-direction: column-reverse;
+  /*   justify-content: space-evenly; */
+  }
+  .infor{
+    padding: 0;
+    padding-top: 10px;
+    height: 40%;
+    flex-direction: column;
+    gap:5px
+  }
+  .tag-name{
+    font-size: 1.5em;
+  }
+  .name{
+    font-size: 1.5em;
+  }
+  .code{
+    font-size: 1empx;
+    padding: 0;
+  }
+  .type{
+    margin: 5px;
+  }
+  .price{
+    margin: 7px;
+  }
+  .swiper-slide img{
+    display: block;
+    width: 200px;
+    height: 200px;
+  }
+  .card-btn{
+    top: 86%;
+    left: 35%
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: fixed;
+    bottom: 18%;
+    left: 38%;
+  }
+
 }
 @media (min-width: 320px) and (max-width: 600px){
   .primary-navigation{
@@ -423,6 +480,57 @@ flex-direction: column;
     display: block;
     font-size: 2rem;
     cursor: pointer;
+  }
+  .main {
+    max-width: 100%;
+  }
+  .container{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper-slide{
+    align-items: center;
+    text-align: center;
+    flex-direction: column-reverse;
+  /*   justify-content: space-evenly; */
+  }
+  .infor{
+    padding: 0;
+    padding-top: 10px;
+    height: 40%;
+    flex-direction: column;
+    gap:5px
+  }
+  .tag-name{
+    font-size: 1.5em;
+  }
+  .name{
+    font-size: 1.5em;
+  }
+  .code{
+    font-size: 1empx;
+    padding: 0;
+  }
+  .type{
+    margin: 5px;
+  }
+  .price{
+    margin: 7px;
+  }
+  .swiper-slide img{
+    display: block;
+    width: 200px;
+    height: 200px;
+  }
+  .card-btn{
+    top: 86%;
+    left: 35%
+  }
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: fixed;
+    bottom: 18%;
+    left: 38%;
   }
 }
 
