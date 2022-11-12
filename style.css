@@ -21,6 +21,7 @@ body {
 .container{
   display: flex;
   align-items: center;
+  /* flex-direction: column; */
   justify-content: center;
   height: 80%;
 }
@@ -32,7 +33,6 @@ body {
 }
 
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
@@ -49,7 +49,10 @@ body {
 
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-  width: 650px;
+  width: 100px;
+  position: fixed;
+  left: 48%;
+  bottom:16%;
 }
 .swiper-pagination-bullet {
   width: 12px;
@@ -94,6 +97,10 @@ body {
   font-weight: 700;
 }
 .card-btn{  
+  position: fixed;
+  z-index:1;
+  bottom: 24%;
+  left: 17%;
   width: 130px;
   height: 40px;   
   color: #FFFFFF;
