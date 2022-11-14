@@ -425,7 +425,7 @@ flex-direction: column;
     transform: translateY(-100%);
     transition: transform 250ms ease-in-out;
     background-color: #FFFFFF;
-    opacity: 0.9;
+    opacity: 1.9;
 
   }
   .primary-navigation[data-visible="true"]{
