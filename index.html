@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta charset="utf-8" />
-      <title>Swiper demo</title>
+      <title>Dino Halloween Shop</title>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -60,7 +60,7 @@
                         </button>
                         <nav>
                         <ul class="primary-navigation" id="primary-navigation" data-visible="false">
-                                <li><a href="">Ghost</a></li>
+                                <li><a href="" class="ghost">Ghost</a></li>
                                 <li><a href="">Pumpkin</a></li>
                                 <li><a href="">Bat</a></li>
                                 <li><a href="">Customize</a></li>
@@ -80,10 +80,11 @@
                               </svg> 
                         </button>
                         <button class="mobile-open-btn">
-                          <svg width="28" height="12" viewBox="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <line y1="1.5" x2="28" y2="1.5" stroke="black" stroke-width="3"/>
                             <line x1="-5.76128e-08" y1="10" x2="14" y2="10" stroke="black" stroke-width="3"/>
                             </svg>
+                            
                                     
                         </button>
 
@@ -101,12 +102,11 @@
                           </div>
                           
                           <div class="cart-body" id="cart-body">
-                                <ul class="products-mini" id="products-mini">
-                                    <!-- <li class="item">
-                
-                                    </li>    -->
-                                </ul>
-                                <button>Check Out</button>
+                                <div class="products-mini" id="products-mini">
+                                  <!--  -->
+                                  
+                                </div>
+                                <button class="checkout-btn">Check Out</button>
                           </div>
                     </div>
               </div>
@@ -140,16 +140,14 @@
         clickable: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '">'  + "</span>";
+        
         },
       },
     });
   
-  $(".swiper-pagination-").on('click', function(){
 
-  swiper.slideTo($(this).index(), 0);
-
-  });
       </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <script src="app.js"></script>
     </body>
   </html>
